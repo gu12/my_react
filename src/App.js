@@ -1,12 +1,15 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import { Provider } from 'react-redux'
+import { renderRoutes } from 'react-router-config'
+import routes from './routes/index.js'
+import { HashRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
-  );
+      <HashRouter>
+        { renderRoutes(routes) }
+      </HashRouter>
+  )
 }
 
 export default App;
